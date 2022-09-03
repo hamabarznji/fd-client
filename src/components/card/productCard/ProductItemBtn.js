@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button, StyleSheet, Pressable } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { AntDesign } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
@@ -27,7 +27,6 @@ export default function ProductItemBtn({ onAdd, onRemove, id }) {
     const basket = useSelector((state) => state.lezzoo.basket);
     const foundedItem = basket.find((item) => item.id == id);
     const ordereQty = basket.find((item) => item.id == id)?.ordereQty;
-    console.log({ ordereQty });
     return (
         <>
             <View style={styles.btnContainer}>
