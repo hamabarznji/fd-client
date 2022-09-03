@@ -37,6 +37,7 @@ const lezzooSlice = createSlice({
             }
         },
         removeItemFromBasketHandler: (state, action) => {
+           if (state.basket.length == 0) return;
             const index = state.basket.findIndex(
                 (item) => item.id === action.payload
             );
@@ -44,7 +45,6 @@ const lezzooSlice = createSlice({
             const foundedItem = state.basket.find(
                 (item) => item.id === action.payload
             );
-            console.log(foundedItem.ordereQty);
             const updatedItem = {
                 ...foundedItem,
                 ordereQty: foundedItem.ordereQty - 1,
@@ -55,6 +55,7 @@ const lezzooSlice = createSlice({
             } else {
                 state.basket.splice(index, 1);
                 state.basket.push(updatedItem);
+                state.basket.filter((basket) => basket?.ordereQty == 0);
             }
         },
 
