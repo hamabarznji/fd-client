@@ -9,6 +9,7 @@ export default function CardItem({ data, onPress }) {
     return (
         <Pressable
             onPress={() => {
+                if (!data.isOpen) return;
                 navigation.navigate("Product", {
                     storeid: data?.id,
                 });
@@ -21,7 +22,20 @@ export default function CardItem({ data, onPress }) {
                         uri: data?.imageSrc,
                     }}
                     style={styles.image}
+                    blurRadius={data.isOpen ? 0 : 6}
                 />
+                {!data.isOpen && (
+                    <Text
+                        style={{
+                            position: "absolute",
+                            fontSize: 32,
+                            fontWeight: "bold",
+                            color: "#e4343e",
+                        }}
+                    >
+                        Closed
+                    </Text>
+                )}
             </View>
             <View style={styles.storeInfoContainer}>
                 <View style={{ marginLeft: 12, marginTop: 4 }}>
