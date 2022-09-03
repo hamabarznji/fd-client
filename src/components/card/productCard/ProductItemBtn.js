@@ -23,17 +23,11 @@ const styles = StyleSheet.create({
     },
 });
 
-export default function ProductItemBtn({
-    onAdd,
-    onRemove,
-
-    id,
-}) {
+export default function ProductItemBtn({ onAdd, onRemove, id }) {
     const basket = useSelector((state) => state.lezzoo.basket);
     const foundedItem = basket.find((item) => item.id == id);
-    const disabled = foundedItem?.ordereQty == 0;
-    console.log(disabled);
-
+    const ordereQty = basket.find((item) => item.id == id)?.ordereQty;
+    console.log({ ordereQty });
     return (
         <>
             <View style={styles.btnContainer}>
@@ -61,8 +55,9 @@ export default function ProductItemBtn({
                     <AntDesign
                         name="minus"
                         size={32}
-                        color={foundedItem?.ordereQty == 0 ? "gray" : "black"}
+                        color={ordereQty == undefined ? "gray" : "black"}
                         style={styles.btn}
+                        disabled={foundedItem?.ordereQt == 0}
                     />
                 </TouchableOpacity>
             </View>
