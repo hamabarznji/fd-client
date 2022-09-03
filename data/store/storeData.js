@@ -6,7 +6,7 @@ const stores = [
         sales: "50",
         rating: 6.2,
         date: "2022",
-        status: true,
+        isOpen: true,
         imageSrc:
             "https://pbs.twimg.com/media/FUlqxDWWYAwpAvS?format=png&name=small",
         storeImage:
@@ -74,7 +74,7 @@ const stores = [
         id: 2,
         name: "Hardeez",
         address: "Erbil",
-        status: true,
+        isOpen: true,
         rating: 7.4,
         date: "2023",
         slaes: "230",
@@ -146,7 +146,7 @@ const stores = [
         id: 3,
         name: "Burger King",
         address: "Erbil",
-        status: true,
+        isOpen: true,
         rating: 8.2,
         date: "2024",
         slaes: "201",
@@ -218,7 +218,7 @@ const stores = [
         id: 4,
         name: "Shawarma Corner",
         address: "Erbil",
-        status: true,
+        isOpen: true,
         rating: 3.2,
         date: "2026",
         slaes: "222",
@@ -290,7 +290,7 @@ const stores = [
         id: 5,
         name: "Defermo Restaurant",
         address: "Erbil",
-        status: true,
+        isOpen: true,
         rating: 4.4,
         date: "3000",
         slaes: "400",
@@ -357,6 +357,19 @@ const stores = [
                     "https://img.freepik.com/free-photo/top-view-vegetable-soup-with-meat-inside-plate-grey_140725-36040.jpg?w=1380&t=st=1662074328~exp=1662074928~hmac=52ce84280c7c580657eb0f7acb27871646e2b15acd482fc9bba6ea54290726cc",
             },
         ],
+    },
+    {
+        id: 6,
+        name: "Kebab Faruq",
+        address: "Erbil",
+        isOpen: false,
+        rating: 3.2,
+        date: "250",
+        slaes: "350",
+        imageSrc:
+            "https://scontent.febl5-2.fna.fbcdn.net/v/t1.6435-9/74647539_104153587700428_6223966722156658688_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=5DlwfcewOfEAX9Kf727&_nc_oc=AQkrny9SNofUtmnbJQbu3nvEMsUEf5m1Nl0gfPv0jkbXqIUNHUyDMUPEcw356jBIxIA&_nc_ht=scontent.febl5-2.fna&oh=00_AT8CFGv5mx12pUnQEkUAKXrTHPvUfjtWskOiIVSFx1j5-Q&oe=633A847A",
+        storeImage:
+            "https://pizzapalaceburwell.com/wp-content/uploads/2021/11/Food.jpg",
     },
 ];
 export default stores;
